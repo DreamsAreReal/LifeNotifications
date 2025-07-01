@@ -8,7 +8,10 @@ on:
 jobs:
   notify:
     runs-on: ubuntu-latest
-
+    env:
+      sTELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_IDS: ${{ secrets.TELEGRAM_CHAT_IDS }}
+      LIFE_FILE_PATH: ${{ github.workspace }}/LifeNotifications/data.txt
     steps:
       - name: Checkout репозиторий
         uses: actions/checkout@v4
@@ -29,7 +32,4 @@ jobs:
 
       - name: Запуск отправки уведомления
         run: dotnet run --project ./LifeNotifications/LifeNotifications.csproj
-        env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_IDS: ${{ secrets.TELEGRAM_CHAT_IDS }}
-          LIFE_FILE_PATH: ${{ github.workspace }}/LifeNotifications/data.txt
+       
