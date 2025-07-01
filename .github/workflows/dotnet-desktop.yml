@@ -2,7 +2,7 @@ name: Life Notification Sender
 
 on:
   schedule:
-    - cron: '0 22 * * *'  #  каждый день в 22:00 UTC
+    - cron: '32 11 * * *'  #  каждый день в 22:00 UTC
   workflow_dispatch:       #  ручной запуск вручную
 
 jobs:
