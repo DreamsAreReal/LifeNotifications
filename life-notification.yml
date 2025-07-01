@@ -1,0 +1,35 @@
+name: Life Notification Sender
+
+on:
+  schedule:
+    - cron: '0 22 * * *'  #  каждый день в 22:00 UTC
+  workflow_dispatch:       #  ручной запуск вручную
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout репозиторий
+        uses: actions/checkout@v4
+
+      - name: Установка .NET 8
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Восстановление зависимостей
+        run: dotnet restore
+
+      - name: Сборка проекта
+        run: dotnet build --configuration Release
+
+      - name: Лог текущего времени (UTC)
+        run: date -u
+
+      - name: Запуск отправки уведомления
+        run: dotnet run --project ./LifeNotifications/LifeNotifications.csproj
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_IDS: ${{ secrets.TELEGRAM_CHAT_IDS }}
+          LIFE_FILE_PATH: ${{ github.workspace }}/LifeNotifications/data.txt

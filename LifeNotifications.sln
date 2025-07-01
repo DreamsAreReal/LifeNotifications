@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LifeNotifications", "LifeNotifications\LifeNotifications.csproj", "{915709D5-FB06-473B-95DF-FDABBD6C6F50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LifeNotifications.Data", "LifeNotifications.Data\LifeNotifications.Data.csproj", "{46FBBC62-7A4D-467C-85E1-D501F93FFD81}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LifeNotifications.UseCases", "LifeNotifications.UseCases", "{542A16E6-9F56-437D-B3BF-07CA549D3F97}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LifeNotifications.DataParser", "LifeNotifications.DataParser\LifeNotifications.DataParser.csproj", "{5BEE1FEA-4B6F-4A3F-BE28-8FEB1ADCFAAB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LifeNotifications.Telegram", "LifeNotifications.Telegram\LifeNotifications.Telegram.csproj", "{020EB20D-A2F8-488E-AE37-024401A5C837}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{915709D5-FB06-473B-95DF-FDABBD6C6F50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{915709D5-FB06-473B-95DF-FDABBD6C6F50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{915709D5-FB06-473B-95DF-FDABBD6C6F50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{915709D5-FB06-473B-95DF-FDABBD6C6F50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46FBBC62-7A4D-467C-85E1-D501F93FFD81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46FBBC62-7A4D-467C-85E1-D501F93FFD81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46FBBC62-7A4D-467C-85E1-D501F93FFD81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46FBBC62-7A4D-467C-85E1-D501F93FFD81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BEE1FEA-4B6F-4A3F-BE28-8FEB1ADCFAAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BEE1FEA-4B6F-4A3F-BE28-8FEB1ADCFAAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BEE1FEA-4B6F-4A3F-BE28-8FEB1ADCFAAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BEE1FEA-4B6F-4A3F-BE28-8FEB1ADCFAAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{020EB20D-A2F8-488E-AE37-024401A5C837}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{020EB20D-A2F8-488E-AE37-024401A5C837}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{020EB20D-A2F8-488E-AE37-024401A5C837}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{020EB20D-A2F8-488E-AE37-024401A5C837}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5BEE1FEA-4B6F-4A3F-BE28-8FEB1ADCFAAB} = {542A16E6-9F56-437D-B3BF-07CA549D3F97}
+		{020EB20D-A2F8-488E-AE37-024401A5C837} = {542A16E6-9F56-437D-B3BF-07CA549D3F97}
+	EndGlobalSection
+EndGlobal
