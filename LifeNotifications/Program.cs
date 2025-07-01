@@ -3,9 +3,9 @@ using LifeNotifications.DataParser;
 using LifeNotifications.Telegram;
 
 string filePath = "./LifeNotifications/data.txt";
-string telegramToken = Environment.GetEnvironmentVariable("TELEGRAM_BOT_TOKEN") ?? throw new Exception("Token not found");
+string telegramToken = Environment.GetEnvironmentVariable("data.TELEGRAM_BOT_TOKEN") ?? throw new Exception("Token not found");
 
-string? rawIds = Environment.GetEnvironmentVariable("TELEGRAM_CHAT_IDS");
+string? rawIds = Environment.GetEnvironmentVariable("data.TELEGRAM_CHAT_IDS");
 if (string.IsNullOrWhiteSpace(rawIds))
     throw new InvalidOperationException("TELEGRAM_CHAT_IDS not found or empty");
 
@@ -26,3 +26,6 @@ Notification lifeNotification =
 
 foreach (long id in telegramOwnerIds)
     await sender.SendMessageAsync(id, lifeNotification.Text);
+    
+    
+    
